@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cenave451ocwi"]
+
+[ext_resource type="Texture2D" uid="uid://ctmoy43saohmr" path="res://Selling Place-1.png (1).png" id="1_4sra1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gks3k"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywl65"]
+
+[node name="Seller" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_4sra1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gks3k")
+
+[node name="Sell" type="Area2D" parent="." groups=["Sell"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ywl65")

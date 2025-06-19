@@ -1,0 +1,80 @@
+[gd_scene load_steps=15 format=3 uid="uid://byfxxlnelj4wu"]
+
+[ext_resource type="Script" uid="uid://8luj5474xv1d" path="res://conveyor.gd" id="1_sr0bh"]
+[ext_resource type="Texture2D" uid="uid://bcgm4fbkwefra" path="res://b.png" id="2_3pu4i"]
+[ext_resource type="Texture2D" uid="uid://ddykwukcvtjl4" path="res://b1.png" id="3_qfo5c"]
+[ext_resource type="Texture2D" uid="uid://cowdov1w8c4rk" path="res://b2.png" id="4_lcx8o"]
+[ext_resource type="Texture2D" uid="uid://ch7veyqjsthlc" path="res://b3.png" id="5_3esjh"]
+[ext_resource type="Texture2D" uid="uid://daq8da8td6jfs" path="res://b4.png" id="6_smt6w"]
+[ext_resource type="Texture2D" uid="uid://1pdlm154ohat" path="res://b5.png" id="7_dfqmo"]
+[ext_resource type="Texture2D" uid="uid://ch0j0nl8ct1r" path="res://b6.png" id="8_ataf5"]
+[ext_resource type="Texture2D" uid="uid://druieqi7cm3i7" path="res://b7.png" id="9_84027"]
+[ext_resource type="Texture2D" uid="uid://ce6lxjgho7ocp" path="res://b8.png" id="10_q37k6"]
+[ext_resource type="Texture2D" uid="uid://d2u65pibewrik" path="res://b9.png" id="11_ntcmr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exnjl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3pu4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qfo5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lcx8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3esjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_smt6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dfqmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ataf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_84027")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q37k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ntcmr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpblu"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8a5u2"]
+
+[node name="Conveyor" type="StaticBody2D"]
+script = ExtResource("1_sr0bh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_exnjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9.53674e-07, 9.53674e-07)
+shape = SubResource("RectangleShape2D_gpblu")
+
+[node name="Check" type="Area2D" parent="." groups=["Conveyor"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Check"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_8a5u2")
+
+[node name="Push" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Push"]
+position = Vector2(0, 64)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_8a5u2")

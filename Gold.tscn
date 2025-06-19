@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcufgoxmtko2k"]
+
+[ext_resource type="Script" uid="uid://c203llsyl30ix" path="res://gold.gd" id="1_1gtyv"]
+[ext_resource type="Texture2D" uid="uid://1cpaajbucedp" path="res://Gold ore-1.png.png" id="2_1gtyv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gtyv"]
+size = Vector2(30, 22)
+
+[node name="Gold" type="StaticBody2D"]
+script = ExtResource("1_1gtyv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_1gtyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1gtyv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1gtyv")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0kurmq53vh13"]
+
+[ext_resource type="Script" uid="uid://dklxrdj1rpjjd" path="res://Scenes/title_screen.gd" id="1_rpgwi"]
+[ext_resource type="FontFile" uid="uid://bwlvmstr7m0jb" path="res://Font/BAD GRUNGE.ttf" id="2_0ijhy"]
+[ext_resource type="Texture2D" uid="uid://3w54krew0h4" path="res://Adobe Express - file.png" id="2_6xtyh"]
+[ext_resource type="Texture2D" uid="uid://btlsf1vt7ubr8" path="res://Gear 2.png" id="4_lyuk6"]
+
+[sub_resource type="Theme" id="Theme_0ijhy"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0ijhy")
+script = ExtResource("1_rpgwi")
+
+[node name="AdobeExpress-File" type="Sprite2D" parent="."]
+position = Vector2(960.836, 540.875)
+scale = Vector2(1.00087, 1.03024)
+texture = ExtResource("2_6xtyh")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 834.0
+offset_top = 635.0
+offset_right = 1085.0
+offset_bottom = 683.0
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 834.0
+offset_top = 727.0
+offset_right = 1085.0
+offset_bottom = 804.0
+theme_override_font_sizes/font_size = 50
+text = "Quit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 443.0
+offset_right = 1214.0
+offset_bottom = 611.0
+theme_override_fonts/font = ExtResource("2_0ijhy")
+theme_override_font_sizes/font_size = 160
+text = "AUT   MATA"
+
+[node name="Gear2" type="Sprite2D" parent="."]
+position = Vector2(908, 537)
+scale = Vector2(0.365278, 0.365278)
+texture = ExtResource("4_lyuk6")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

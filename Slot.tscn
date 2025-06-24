@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://20o0dpoob84w"]
+
+[ext_resource type="Texture2D" uid="uid://7fu2r70p6l2x" path="res://GUI 2-1.png (5).png" id="1_otx1m"]
+
+[node name="Slot" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_otx1m")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 2

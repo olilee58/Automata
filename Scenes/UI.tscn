@@ -1,25 +1,146 @@
-[gd_scene format=3 uid="uid://bqupfsm5se5lb"]
+[gd_scene load_steps=4 format=3 uid="uid://bqupfsm5se5lb"]
+
+[ext_resource type="Texture2D" uid="uid://cqld3hryr1cqt" path="res://GUI-1.png (4).png" id="1_nxvpl"]
+[ext_resource type="PackedScene" uid="uid://20o0dpoob84w" path="res://Slot.tscn" id="2_dewlx"]
+[ext_resource type="Texture2D" uid="uid://7fu2r70p6l2x" path="res://GUI 2-1.png (5).png" id="3_dewlx"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 6.0
+offset_right = 20.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Inventory" type="NinePatchRect" parent="."]
+[node name="Build Menu" type="NinePatchRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -559.5
+offset_top = -347.5
+offset_right = 559.5
+offset_bottom = 347.5
 grow_horizontal = 2
 grow_vertical = 2
-region_rect = Rect2(6.07985, 212.521, 44.3963, 91.4792)
+texture = ExtResource("1_nxvpl")
+
+[node name="Inventory Grid Holder" type="GridContainer" parent="Build Menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 103.0
+offset_top = -242.5
+offset_right = 513.0
+offset_bottom = 263.5
+grow_vertical = 2
+columns = 5
+
+[node name="Slot" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot2" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot3" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot4" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot5" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot6" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot7" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot8" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot9" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot10" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot11" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot12" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot13" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot14" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot15" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot16" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot17" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot18" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot19" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot20" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot21" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot22" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot23" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot24" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot25" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot26" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot27" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot28" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot29" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="Slot30" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Build Menu"]
+layout_mode = 2
+offset_left = 540.5
+offset_top = 102.5
+offset_right = 1027.5
+offset_bottom = 601.5
+texture = ExtResource("3_dewlx")
+patch_margin_left = 3
+patch_margin_top = 2
 patch_margin_right = 2
+patch_margin_bottom = 2

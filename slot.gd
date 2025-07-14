@@ -1,3 +1,4 @@
+@tool
 extends PanelContainer
 
 @export var item : Item:
@@ -8,3 +9,6 @@ extends PanelContainer
 func _on_mouse_entered() -> void:
 	if item != null:
 		owner.set_description(item)
+
+
+	

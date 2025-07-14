@@ -1,24 +1,89 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqupfsm5se5lb"]
+[gd_scene load_steps=25 format=3 uid="uid://bqupfsm5se5lb"]
 
 [ext_resource type="Script" uid="uid://d2c680dyyk85m" path="res://Scenes/ui.gd" id="1_hfhsn"]
 [ext_resource type="Texture2D" uid="uid://cqld3hryr1cqt" path="res://GUI-1.png (4).png" id="1_nxvpl"]
 [ext_resource type="PackedScene" uid="uid://20o0dpoob84w" path="res://Slot.tscn" id="2_dewlx"]
 [ext_resource type="Texture2D" uid="uid://7fu2r70p6l2x" path="res://GUI 2-1.png (5).png" id="3_dewlx"]
 [ext_resource type="Resource" uid="uid://bnnf1jdcibhlb" path="res://Resources.tres" id="4_qwshj"]
+[ext_resource type="Script" uid="uid://bs1wsxmamssgi" path="res://Item.gd" id="5_xjg7p"]
+[ext_resource type="Texture2D" uid="uid://ctmoy43saohmr" path="res://Selling Place-1.png (1).png" id="6_b1goy"]
+[ext_resource type="Texture2D" uid="uid://b02xld8pblqgl" path="res://l1.png" id="6_wunin"]
+[ext_resource type="Texture2D" uid="uid://bdxkmpajo2r8s" path="res://r1.png" id="8_mg6lk"]
+[ext_resource type="Texture2D" uid="uid://c0sw7wlt1csnr" path="res://Corner_Left00.png" id="10_j04uc"]
+[ext_resource type="Texture2D" uid="uid://gi8p4aet8jmn" path="res://New Piskel-1.png.png" id="10_vqx31"]
+[ext_resource type="Texture2D" uid="uid://ddykwukcvtjl4" path="res://b1.png" id="11_vqx31"]
+[ext_resource type="Texture2D" uid="uid://do52efeigcflh" path="res://Smelter-1.png.png" id="12_n04ve"]
+[ext_resource type="Texture2D" uid="uid://dc4ku4tm50qob" path="res://Factory.png" id="13_wi7yl"]
 
 [sub_resource type="Theme" id="Theme_qwshj"]
 
 [sub_resource type="Theme" id="Theme_48q88"]
+
+[sub_resource type="Resource" id="Resource_mg6lk"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor 2"
+icon = ExtResource("8_mg6lk")
+description = "Same As The Normal Conveyor But With An Opening On The Right Side"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_wunin"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor 3"
+icon = ExtResource("6_wunin")
+description = "Same As Conveyor 2, Except The Opening Is On The Left Side"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_j04uc"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor 4"
+icon = ExtResource("11_vqx31")
+description = "This One Is A Combination Of Conveyor 2 And 3 Having Both Sides Open"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_vqx31"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor 5"
+icon = ExtResource("10_j04uc")
+description = "Bends Any Direction As Long As You Rotate Them"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_n04ve"]
+script = ExtResource("5_xjg7p")
+title = "Drill"
+icon = ExtResource("10_vqx31")
+description = "This Building Drills Ores If Found"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_b1goy"]
+script = ExtResource("5_xjg7p")
+title = "Sell"
+icon = ExtResource("6_b1goy")
+description = "This Building Sells Gold Ore and Gold Bars (If Smelted Through The Factory)"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_wi7yl"]
+script = ExtResource("5_xjg7p")
+title = "Smelter"
+icon = ExtResource("12_n04ve")
+description = "If You Put Gold Ore Into This Machine, You Can Smelt Gold Ore Into Gold Bars"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_5q4fb"]
+script = ExtResource("5_xjg7p")
+title = "Ammo Factory"
+icon = ExtResource("13_wi7yl")
+description = "This Factory Requires Golden Bars, It Will Then Produce Ammunition 2- 3 Shells For Your Guns"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [node name="UI" type="Control" node_paths=PackedStringArray("description")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = 6.0
-offset_right = 20.0
-offset_bottom = 6.0
+offset_left = 157.0
+offset_top = 234.0
+offset_right = 157.0
+offset_bottom = 234.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qwshj")
@@ -59,27 +124,35 @@ item = ExtResource("4_qwshj")
 
 [node name="Slot2" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_mg6lk")
 
 [node name="Slot3" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_wunin")
 
 [node name="Slot4" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_j04uc")
 
 [node name="Slot5" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_vqx31")
 
 [node name="Slot6" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_n04ve")
 
 [node name="Slot7" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_b1goy")
 
 [node name="Slot8" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_wi7yl")
 
 [node name="Slot9" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_5q4fb")
 
 [node name="Slot10" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
@@ -160,8 +233,10 @@ patch_margin_bottom = 2
 layout_mode = 0
 offset_left = 23.0
 offset_top = 20.0
-offset_right = 269.0
-offset_bottom = 118.0
+offset_right = 463.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
 
 [node name="Description" type="RichTextLabel" parent="Build Menu/Description"]
 layout_mode = 1
@@ -173,9 +248,21 @@ anchor_bottom = 0.5
 offset_left = -222.5
 offset_top = -120.5
 offset_right = 221.5
-offset_bottom = 118.5
+offset_bottom = 229.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+scroll_active = false
 
 [node name="Icon" type="TextureRect" parent="Build Menu/Description"]
 layout_mode = 1
@@ -190,3 +277,4 @@ offset_right = 221.5
 offset_bottom = 238.5
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 4

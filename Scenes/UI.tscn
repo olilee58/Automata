@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bqupfsm5se5lb"]
+[gd_scene load_steps=27 format=3 uid="uid://bqupfsm5se5lb"]
 
 [ext_resource type="Script" uid="uid://d2c680dyyk85m" path="res://Scenes/ui.gd" id="1_hfhsn"]
 [ext_resource type="Texture2D" uid="uid://cqld3hryr1cqt" path="res://GUI-1.png (4).png" id="1_nxvpl"]
@@ -6,14 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://7fu2r70p6l2x" path="res://GUI 2-1.png (5).png" id="3_dewlx"]
 [ext_resource type="Resource" uid="uid://bnnf1jdcibhlb" path="res://Resources.tres" id="4_qwshj"]
 [ext_resource type="Script" uid="uid://bs1wsxmamssgi" path="res://Item.gd" id="5_xjg7p"]
-[ext_resource type="Texture2D" uid="uid://ctmoy43saohmr" path="res://Selling Place-1.png (1).png" id="6_b1goy"]
 [ext_resource type="Texture2D" uid="uid://b02xld8pblqgl" path="res://l1.png" id="6_wunin"]
 [ext_resource type="Texture2D" uid="uid://bdxkmpajo2r8s" path="res://r1.png" id="8_mg6lk"]
 [ext_resource type="Texture2D" uid="uid://c0sw7wlt1csnr" path="res://Corner_Left00.png" id="10_j04uc"]
 [ext_resource type="Texture2D" uid="uid://gi8p4aet8jmn" path="res://New Piskel-1.png.png" id="10_vqx31"]
+[ext_resource type="Texture2D" uid="uid://dj3pkxo5xfw7b" path="res://Selling Place-1.png (3).png" id="11_5q4fb"]
 [ext_resource type="Texture2D" uid="uid://ddykwukcvtjl4" path="res://b1.png" id="11_vqx31"]
 [ext_resource type="Texture2D" uid="uid://do52efeigcflh" path="res://Smelter-1.png.png" id="12_n04ve"]
 [ext_resource type="Texture2D" uid="uid://dc4ku4tm50qob" path="res://Factory.png" id="13_wi7yl"]
+[ext_resource type="Texture2D" uid="uid://bbl32ke61epg8" path="res://Flak 37-1.png (1).png" id="14_5q4fb"]
 
 [sub_resource type="Theme" id="Theme_qwshj"]
 
@@ -57,7 +58,7 @@ metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 [sub_resource type="Resource" id="Resource_b1goy"]
 script = ExtResource("5_xjg7p")
 title = "Sell"
-icon = ExtResource("6_b1goy")
+icon = ExtResource("11_5q4fb")
 description = "This Building Sells Gold Ore and Gold Bars (If Smelted Through The Factory)"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
@@ -75,15 +76,22 @@ icon = ExtResource("13_wi7yl")
 description = "This Factory Requires Golden Bars, It Will Then Produce Ammunition 2- 3 Shells For Your Guns"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
+[sub_resource type="Resource" id="Resource_mqm5i"]
+script = ExtResource("5_xjg7p")
+title = "Flak 37"
+icon = ExtResource("14_5q4fb")
+description = "Gun Defence, Can Also Be Used As Artillery If You Switch The Range"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
 [node name="UI" type="Control" node_paths=PackedStringArray("description")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 157.0
-offset_top = 234.0
-offset_right = 157.0
-offset_bottom = 234.0
+offset_left = 154.0
+offset_top = 210.0
+offset_right = -792.0
+offset_bottom = -322.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qwshj")
@@ -97,10 +105,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -559.5
-offset_top = -347.5
-offset_right = 559.5
-offset_bottom = 347.5
+offset_left = 187.0
+offset_top = -46.0
+offset_right = 1300.0
+offset_bottom = 596.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_nxvpl")
@@ -111,9 +119,9 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 103.0
-offset_top = -242.5
-offset_right = 513.0
-offset_bottom = 263.5
+offset_top = -241.0
+offset_right = 519.0
+offset_bottom = 264.0
 grow_vertical = 2
 theme = SubResource("Theme_48q88")
 columns = 5
@@ -156,6 +164,7 @@ item = SubResource("Resource_5q4fb")
 
 [node name="Slot10" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
+item = SubResource("Resource_mqm5i")
 
 [node name="Slot11" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
@@ -219,10 +228,10 @@ layout_mode = 2
 
 [node name="Description" type="NinePatchRect" parent="Build Menu"]
 layout_mode = 2
-offset_left = 540.5
-offset_top = 102.5
-offset_right = 1027.5
-offset_bottom = 601.5
+offset_left = 528.0
+offset_top = 80.0
+offset_right = 1015.0
+offset_bottom = 579.0
 texture = ExtResource("3_dewlx")
 patch_margin_left = 3
 patch_margin_top = 2

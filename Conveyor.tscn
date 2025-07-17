@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://blhqcm7owxs2k"]
+[gd_scene load_steps=18 format=3 uid="uid://blhqcm7owxs2k"]
 
 [ext_resource type="Script" uid="uid://8luj5474xv1d" path="res://conveyor.gd" id="1_8a5u2"]
 [ext_resource type="Texture2D" uid="uid://cy1ia7l2afjhn" path="res://sprite_00.png" id="2_8a5u2"]
+[ext_resource type="Texture2D" uid="uid://d0u2qk3uani5u" path="res://Animated Drill-1.png (3).png" id="2_sp5lb"]
 [ext_resource type="Texture2D" uid="uid://btxahfeeckhf4" path="res://sprite_01.png" id="3_sp5lb"]
 [ext_resource type="Texture2D" uid="uid://dlrvdon0qwsy7" path="res://sprite_02.png" id="4_ohetx"]
 [ext_resource type="Texture2D" uid="uid://bv5jbpk37t0pu" path="res://sprite_03.png" id="5_owvvu"]
@@ -14,6 +15,14 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8a5u2"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sp5lb")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_8a5u2")
@@ -48,6 +57,14 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8a5u2")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpblu"]
@@ -56,17 +73,19 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a5u2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp5lb"]
-size = Vector2(3, 64)
+size = Vector2(2, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohetx"]
-size = Vector2(3, 64)
+size = Vector2(2, 62)
 
 [node name="Conveyor" type="StaticBody2D"]
+input_pickable = true
 script = ExtResource("1_8a5u2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_8a5u2")
+animation = &"bad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9.53674e-07, 9.53674e-07)
@@ -81,11 +100,11 @@ shape = SubResource("RectangleShape2D_8a5u2")
 [node name="Destroy" type="Area2D" parent="." groups=["Destroy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destroy"]
-position = Vector2(30.5, 0)
+position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_sp5lb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Destroy"]
-position = Vector2(-30.5, 0)
+position = Vector2(-30, 0)
 shape = SubResource("RectangleShape2D_ohetx")
 
 [node name="Push" type="Area2D" parent="."]
@@ -94,3 +113,6 @@ shape = SubResource("RectangleShape2D_ohetx")
 position = Vector2(0, 64)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_8a5u2")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

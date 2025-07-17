@@ -10,14 +10,14 @@ func _ready() -> void:
 	while Global.placing == 1:
 		if $Destroy.has_overlapping_areas():
 			Global.can_place = 0
-	#		$AnimatedSprite2D.play("bad")
+			#$AnimatedSprite2D.play("bad")
 		else:
 			Global.can_place = 1
-			$AnimatedSprite2D.play("new_animation")
+			#$AnimatedSprite2D.play("new_animation")
 		await get_tree().create_timer(0.1).timeout
 	$AnimatedSprite2D.play("default")
-	$AnimatedSprite2D.set_frame_and_progress(world.frame, world.frame_progress)
 	modulate.a = 1
+	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):

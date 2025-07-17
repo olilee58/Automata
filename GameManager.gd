@@ -24,12 +24,6 @@ func _process(_delta: float) -> void:
 	if placing:
 		current.global_position = current.global_position.move_toward(get_global_mouse_position(), 9999999999999)
 		current.global_position = current.global_position.snapped(Vector2.ONE * 64)
-	if Input.is_mouse_button_pressed(1):
-		placing = false
-		Global.placing = 0
-	if Input.is_action_just_pressed("Rotate"):
-		if placing:
-			current.rotate(deg_to_rad(90))
 			
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Buy"):
@@ -39,6 +33,13 @@ func _input(event: InputEvent) -> void:
 			var new_tower = towers[current_towers_index].instantiate()
 			add_child(new_tower)
 			current = new_tower
+	elif event.is_action_pressed("Rotate"):
+		if placing:
+			current.rotate(deg_to_rad(90))
+	elif event.is_action_pressed("Select"):
+		if Global.can_place == 1:
+			placing = false
+			Global.placing = 0
 	elif event.is_action_pressed("Cancel"):
 		if placing:
 			placing = false
@@ -62,3 +63,5 @@ func _input(event: InputEvent) -> void:
 		current_towers_index = 7
 	elif event.is_action_pressed("9"):
 		current_towers_index = 8
+	elif event.is_action_pressed("0"):
+		current_towers_index = 9

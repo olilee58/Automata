@@ -1,24 +1,26 @@
 extends StaticBody2D
 
-@onready var world = $".."
 var delete = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2D.play("new_animation")
+	$AnimatedSprite2D.play("default")
 	modulate.a = 0.5
 	while Global.placing == 1:
 		if $Destroy.has_overlapping_areas():
 			Global.can_place = 0
-	#		$AnimatedSprite2D.play("bad")
+#			$AnimatedSprite2D.play("bad")
 		else:
 			Global.can_place = 1
-			$AnimatedSprite2D.play("new_animation")
+			$AnimatedSprite2D.play("default")
 		await get_tree().create_timer(0.1).timeout
-	$AnimatedSprite2D.play("default")
-	$AnimatedSprite2D.set_frame_and_progress(world.frame, world.frame_progress)
 	modulate.a = 1
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):
 		if delete == 1:

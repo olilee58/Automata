@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://byfxxlnelj4wu"]
+[gd_scene load_steps=16 format=3 uid="uid://byfxxlnelj4wu"]
 
 [ext_resource type="Script" uid="uid://8luj5474xv1d" path="res://conveyor.gd" id="1_sr0bh"]
 [ext_resource type="Texture2D" uid="uid://bcgm4fbkwefra" path="res://b.png" id="2_3pu4i"]
@@ -48,6 +48,14 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3pu4i")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpblu"]
@@ -55,12 +63,17 @@ size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a5u2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sr0bh"]
+size = Vector2(1, 1)
+
 [node name="Conveyor" type="StaticBody2D"]
+input_pickable = true
 script = ExtResource("1_sr0bh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_exnjl")
+animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9.53674e-07, 9.53674e-07)
@@ -72,9 +85,22 @@ shape = SubResource("RectangleShape2D_gpblu")
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_8a5u2")
 
+[node name="Destroy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Destroy"]
+position = Vector2(-31, 31)
+shape = SubResource("RectangleShape2D_sr0bh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Destroy"]
+position = Vector2(31, -31)
+shape = SubResource("RectangleShape2D_sr0bh")
+
 [node name="Push" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Push"]
 position = Vector2(0, 64)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_8a5u2")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

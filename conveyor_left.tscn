@@ -48,6 +48,14 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6sure")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpblu"]
@@ -56,17 +64,19 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a5u2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkg0r"]
-size = Vector2(3, 64)
+size = Vector2(2, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sure"]
-size = Vector2(61, 3)
+size = Vector2(60, 2)
 
 [node name="Conveyor_Left" type="StaticBody2D"]
+input_pickable = true
 script = ExtResource("1_lkg0r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_omw50")
+animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9.53674e-07, 9.53674e-07)
@@ -81,11 +91,11 @@ shape = SubResource("RectangleShape2D_8a5u2")
 [node name="Destroy" type="Area2D" parent="." groups=["Destroy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destroy"]
-position = Vector2(30.5, 0)
+position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_lkg0r")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Destroy"]
-position = Vector2(-1.5, 30.5)
+position = Vector2(-1, 30)
 shape = SubResource("RectangleShape2D_6sure")
 
 [node name="Push" type="Area2D" parent="."]
@@ -94,3 +104,6 @@ shape = SubResource("RectangleShape2D_6sure")
 position = Vector2(-64, 0)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_8a5u2")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

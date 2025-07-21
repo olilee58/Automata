@@ -1,13 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0kurmq53vh13"]
+[gd_scene load_steps=6 format=3 uid="uid://copw0r1v3v7o4"]
 
-[ext_resource type="Script" uid="uid://dklxrdj1rpjjd" path="res://title_screen.gd" id="1_rpgwi"]
+[ext_resource type="Script" path="res://Scenes/title_screen.gd" id="1_rpgwi"]
 [ext_resource type="FontFile" uid="uid://bwlvmstr7m0jb" path="res://Font/BAD GRUNGE.ttf" id="2_0ijhy"]
 [ext_resource type="Texture2D" uid="uid://3w54krew0h4" path="res://Adobe Express - file.png" id="2_6xtyh"]
 [ext_resource type="Texture2D" uid="uid://btlsf1vt7ubr8" path="res://Gear 2.png" id="4_lyuk6"]
 
 [sub_resource type="Theme" id="Theme_0ijhy"]
 
-[node name="TitleScreen" type="Control"]
+[node name="TitleScreen2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

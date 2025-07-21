@@ -4,17 +4,27 @@ extends StaticBody2D
 var current = null
 var go = 0
 var stop = 0
+var delete = 0
 
 func _ready() -> void:
+	$AnimatedSprite2D.play("new_animation")
+	modulate.a = 0.5
 	while Global.placing == 1:
-		$AnimatedSprite2D.play("new_animation")
+		if $Destroy.has_overlapping_areas():
+			Global.can_place = 0
+	#		$AnimatedSprite2D.play("bad")
+		else:
+			Global.can_place = 1
+			$AnimatedSprite2D.play("new_animation")
 		await get_tree().create_timer(0.1).timeout
 	$AnimatedSprite2D.play("default")
+	modulate.a = 1
 	mining()
 
 func mining():
 	while true:
-		await get_tree().create_timer(5).timeout
+		var number = randf_range(4.0, 6.0)
+		await get_tree().create_timer(number).timeout
 		var new_ore = ore.instantiate()
 		add_child(new_ore)
 		current = get_child(-1)
@@ -34,3 +44,16 @@ func _process(_delta: float) -> void:
 		else:
 			go = 0
 			stop = 0
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Delete"):
+		if delete == 1:
+			if Global.placing == 0:
+				queue_free()
+
+func _on_mouse_entered() -> void:
+	delete = 1
+	
+
+func _on_mouse_exited() -> void:
+	delete = 0

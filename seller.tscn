@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cenave451ocwi"]
 
 [ext_resource type="Texture2D" uid="uid://ctmoy43saohmr" path="res://Selling Place-1.png (1).png" id="1_4sra1"]
-[ext_resource type="Script" path="res://seller.gd" id="1_gks3k"]
+[ext_resource type="Script" uid="uid://bx2kjividj20d" path="res://seller.gd" id="1_gks3k"]
 [ext_resource type="Texture2D" uid="uid://cjsj6cncu5sej" path="res://Selling Place-1.png (2).png" id="2_ywl65"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p0ylo"]

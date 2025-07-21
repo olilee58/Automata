@@ -49,8 +49,8 @@ func _input(event: InputEvent) -> void:
 		current_towers_index = 0
 	elif event.is_action_pressed("2"):
 		current_towers_index = 1
-	elif event.is_action_pressed("3"):
-		current_towers_index = 2
+	#elif event.is_action_pressed("3"):
+	#	current_towers_index = 2
 	elif event.is_action_pressed("4"):
 		current_towers_index = 3
 	elif event.is_action_pressed("5"):

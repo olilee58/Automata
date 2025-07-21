@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dg5akd03e3bj3"]
 
-[ext_resource type="Script" path="res://smelter.gd" id="1_3ddg5"]
+[ext_resource type="Script" uid="uid://12b4xmxtp683" path="res://smelter.gd" id="1_3ddg5"]
 [ext_resource type="Texture2D" uid="uid://dgpuewyqfrr0d" path="res://Smelter-1.png (2).png" id="2_6jscv"]
 [ext_resource type="Texture2D" uid="uid://c5a0lgj7kg1fb" path="res://Smelter-1.png (3).png" id="3_xrv27"]
 
@@ -35,6 +35,7 @@ size = Vector2(2, 62)
 size = Vector2(2, 62)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+input_pickable = true
 script = ExtResource("1_3ddg5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -67,3 +68,6 @@ shape = SubResource("RectangleShape2D_n4fsa")
 position = Vector2(0, 64)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_xrv27")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

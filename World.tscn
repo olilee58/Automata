@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bebf73so7humb"]
+[gd_scene load_steps=12 format=3 uid="uid://cwdm0usk6n00j"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="1_c6gwx"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://byfxxlnelj4wu" path="res://join_b.tscn" id="8_fvag4"]
 [ext_resource type="PackedScene" uid="uid://b4n2wi6w6wnnr" path="res://join_l.tscn" id="9_kva58"]
 [ext_resource type="PackedScene" uid="uid://vmr8bq1im0bn" path="res://join_r.tscn" id="10_f5c0m"]
-[ext_resource type="PackedScene" uid="uid://dg5akd03e3bj3" path="res://smelter.tscn" id="11_kva58"]
+[ext_resource type="PackedScene" path="res://smelter.tscn" id="11_kva58"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_2dftf")

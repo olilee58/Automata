@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b4n2wi6w6wnnr" path="res://join_l.tscn" id="9_qjr00"]
 [ext_resource type="PackedScene" uid="uid://vmr8bq1im0bn" path="res://join_r.tscn" id="10_6ym0a"]
 [ext_resource type="Texture2D" uid="uid://crawb1gclnpm1" path="res://mind1_real.png" id="11_m2occ"]
-[ext_resource type="PackedScene" path="res://Scenes/UI.tscn" id="12_vwlrg"]
+[ext_resource type="PackedScene" uid="uid://bv8b2wnnhafdb" path="res://UI.tscn" id="12_vwlrg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
 texture = ExtResource("11_m2occ")
@@ -290,15 +290,10 @@ tile_map_data = PackedByteArray("AAAFAAQAAAAAAAAAAAAFAAMAAAABAAAAAAAFAAIAAAABAAA
 tile_set = SubResource("TileSet_f5c0m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(961, 541)
+position = Vector2(960, 540)
 
 [node name="UI" parent="Camera2D" instance=ExtResource("12_vwlrg")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -776.0
-offset_top = -95.0
-offset_right = -776.0
-offset_bottom = -95.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = -329.0
+offset_top = -40.0
+offset_right = -329.0
+offset_bottom = -40.0

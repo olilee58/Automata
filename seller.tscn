@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cenave451ocwi"]
 
-[ext_resource type="Texture2D" uid="uid://ctmoy43saohmr" path="res://Selling Place-1.png (1).png" id="1_4sra1"]
 [ext_resource type="Script" uid="uid://bx2kjividj20d" path="res://seller.gd" id="1_gks3k"]
 [ext_resource type="Texture2D" uid="uid://cjsj6cncu5sej" path="res://Selling Place-1.png (2).png" id="2_ywl65"]
+[ext_resource type="Texture2D" uid="uid://dj3pkxo5xfw7b" path="res://Selling Place-1.png (3).png" id="3_ywl65"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p0ylo"]
 animations = [{
@@ -16,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_4sra1")
+"texture": ExtResource("3_ywl65")
 }],
 "loop": true,
 "name": &"default",
@@ -38,14 +38,13 @@ script = ExtResource("1_gks3k")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_p0ylo")
-animation = &"bad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gks3k")
 
-[node name="Sell" type="Area2D" parent="." groups=["Sell"]]
+[node name="Check" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sell"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Check"]
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_ywl65")
 

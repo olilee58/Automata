@@ -8,8 +8,9 @@ var bar = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
-	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 1
+	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 2
 	global_rotation_degrees = 0
+	$AnimatedSprite2D.rotation_degrees = randf_range(0, 359)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

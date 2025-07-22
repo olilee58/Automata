@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://byfxxlnelj4wu"]
+[gd_scene load_steps=17 format=3 uid="uid://byfxxlnelj4wu"]
 
 [ext_resource type="Script" uid="uid://8luj5474xv1d" path="res://conveyor.gd" id="1_sr0bh"]
 [ext_resource type="Texture2D" uid="uid://bcgm4fbkwefra" path="res://b.png" id="2_3pu4i"]
+[ext_resource type="Texture2D" uid="uid://bs2tpl3s3raxq" path="res://Both Opened Conveyor-1.png.png" id="2_qfo5c"]
 [ext_resource type="Texture2D" uid="uid://ddykwukcvtjl4" path="res://b1.png" id="3_qfo5c"]
 [ext_resource type="Texture2D" uid="uid://cowdov1w8c4rk" path="res://b2.png" id="4_lcx8o"]
 [ext_resource type="Texture2D" uid="uid://ch7veyqjsthlc" path="res://b3.png" id="5_3esjh"]
@@ -14,6 +15,14 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_exnjl"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qfo5c")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_3pu4i")
@@ -73,13 +82,13 @@ script = ExtResource("1_sr0bh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_exnjl")
-animation = &"new_animation"
+animation = &"bad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9.53674e-07, 9.53674e-07)
 shape = SubResource("RectangleShape2D_gpblu")
 
-[node name="Check" type="Area2D" parent="." groups=["Conveyor"]]
+[node name="Check" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check"]
 scale = Vector2(0.1, 0.1)

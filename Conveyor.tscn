@@ -91,13 +91,13 @@ animation = &"bad"
 position = Vector2(9.53674e-07, 9.53674e-07)
 shape = SubResource("RectangleShape2D_gpblu")
 
-[node name="Check" type="Area2D" parent="." groups=["Conveyor"]]
+[node name="Check" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check"]
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_8a5u2")
 
-[node name="Destroy" type="Area2D" parent="." groups=["Destroy"]]
+[node name="Destroy" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destroy"]
 position = Vector2(30, 0)

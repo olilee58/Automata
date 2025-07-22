@@ -5,16 +5,19 @@ var delete = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
+	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 	modulate.a = 0.5
 	while Global.placing == 1:
 		if $Destroy.has_overlapping_areas():
 			Global.can_place = 0
-#			$AnimatedSprite2D.play("bad")
+			$AnimatedSprite2D.play("bad")
 		else:
 			Global.can_place = 1
 			$AnimatedSprite2D.play("default")
 		await get_tree().create_timer(0.1).timeout
 	modulate.a = 1
+	$Check.add_to_group("Sell")
+	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 3
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

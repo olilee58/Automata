@@ -5,19 +5,22 @@ var delete = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 	$AnimatedSprite2D.play("new_animation")
 	modulate.a = 0.5
 	while Global.placing == 1:
 		if $Destroy.has_overlapping_areas():
 			Global.can_place = 0
-			#$AnimatedSprite2D.play("bad")
+			$AnimatedSprite2D.play("bad")
 		else:
 			Global.can_place = 1
-			#$AnimatedSprite2D.play("new_animation")
+			$AnimatedSprite2D.play("new_animation")
 		await get_tree().create_timer(0.1).timeout
 	$AnimatedSprite2D.play("default")
 	modulate.a = 1
-	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
+	$Check.add_to_group("Conveyor")
+	$Check.add_to_group("Smelt")
+	$Destroy.add_to_group("Destroy")
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):

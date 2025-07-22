@@ -1,11 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://dg5akd03e3bj3"]
+[gd_scene load_steps=10 format=3 uid="uid://dg5akd03e3bj3"]
 
 [ext_resource type="Script" uid="uid://12b4xmxtp683" path="res://smelter.gd" id="1_3ddg5"]
 [ext_resource type="Texture2D" uid="uid://dgpuewyqfrr0d" path="res://Smelter-1.png (2).png" id="2_6jscv"]
+[ext_resource type="Texture2D" uid="uid://cqw3f3rc3jx0g" path="res://Smelter-1.png (4).png" id="2_xrv27"]
 [ext_resource type="Texture2D" uid="uid://c5a0lgj7kg1fb" path="res://Smelter-1.png (3).png" id="3_xrv27"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ddg5"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xrv27")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_6jscv")
@@ -41,18 +50,18 @@ script = ExtResource("1_3ddg5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_3ddg5")
-animation = &"new_animation"
+animation = &"bad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_6jscv")
 
-[node name="Check" type="Area2D" parent="." groups=["Conveyor", "Smelt"]]
+[node name="Check" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Check"]
 scale = Vector2(0.1, 0.1)
 shape = SubResource("RectangleShape2D_xrv27")
 
-[node name="Destroy" type="Area2D" parent="." groups=["Destroy"]]
+[node name="Destroy" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destroy"]
 position = Vector2(30, 0)

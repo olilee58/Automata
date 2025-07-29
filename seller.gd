@@ -4,6 +4,7 @@ var delete = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$CollisionShape2D.disabled = true
 	$AnimatedSprite2D.play("default")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 	modulate.a = 0.5
@@ -18,6 +19,7 @@ func _ready() -> void:
 	modulate.a = 1
 	$Check.add_to_group("Sell")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 3
+	$CollisionShape2D.disabled = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

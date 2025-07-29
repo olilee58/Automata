@@ -7,6 +7,7 @@ var stop = 0
 var delete = 0
 
 func _ready() -> void:
+	$CollisionShape2D.disabled = true
 	$AnimatedSprite2D.play("new_animation")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 	modulate.a = 0.5
@@ -23,6 +24,7 @@ func _ready() -> void:
 	$Check.add_to_group("Conveyor")
 	$Destroy.add_to_group("Destroy")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 3
+	$CollisionShape2D.disabled = false
 	mining()
 
 func mining():

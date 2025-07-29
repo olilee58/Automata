@@ -5,6 +5,7 @@ var delete = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$CollisionShape2D.disabled = true
 	$AnimatedSprite2D.play("new_animation")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 	modulate.a = 0.5
@@ -22,6 +23,7 @@ func _ready() -> void:
 	$Destroy.add_to_group("Destroy")
 	modulate.a = 1
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 3
+	$CollisionShape2D.disabled = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):

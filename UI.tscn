@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=3 uid="uid://bv8b2wnnhafdb"]
 
-[ext_resource type="Script" uid="uid://bl8xou80f7e6t" path="res://ui.gd" id="1_3ujc7"]
+[ext_resource type="Script" path="res://ui.gd" id="1_3ujc7"]
 [ext_resource type="Texture2D" uid="uid://cqld3hryr1cqt" path="res://GUI-1.png (4).png" id="2_3ujc7"]
 [ext_resource type="PackedScene" uid="uid://20o0dpoob84w" path="res://Slot.tscn" id="2_dewlx"]
 [ext_resource type="Texture2D" uid="uid://7fu2r70p6l2x" path="res://GUI 2-1.png (5).png" id="3_dewlx"]
 [ext_resource type="Texture2D" uid="uid://btxahfeeckhf4" path="res://sprite_01.png" id="4_3ujc7"]
-[ext_resource type="Script" uid="uid://bs1wsxmamssgi" path="res://Item.gd" id="5_xjg7p"]
+[ext_resource type="Script" path="res://Item.gd" id="5_xjg7p"]
 [ext_resource type="Texture2D" uid="uid://b02xld8pblqgl" path="res://l1.png" id="6_wunin"]
 [ext_resource type="Texture2D" uid="uid://bwojo405els4w" path="res://Corner_Right01.png" id="7_foiwe"]
 [ext_resource type="Texture2D" uid="uid://psxrohm3dr6j" path="res://Corner_Left01.png" id="8_foiwe"]

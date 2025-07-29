@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bwojo405els4w" path="res://Corner_Right01.png" id="7_foiwe"]
 [ext_resource type="Texture2D" uid="uid://psxrohm3dr6j" path="res://Corner_Left01.png" id="8_foiwe"]
 [ext_resource type="Texture2D" uid="uid://bdxkmpajo2r8s" path="res://r1.png" id="8_mg6lk"]
+[ext_resource type="Texture2D" uid="uid://dc4ku4tm50qob" path="res://Factory.png" id="9_foiwe"]
 [ext_resource type="Texture2D" uid="uid://dgpuewyqfrr0d" path="res://Smelter-1.png (2).png" id="10_jqn02"]
 [ext_resource type="Texture2D" uid="uid://gi8p4aet8jmn" path="res://New Piskel-1.png.png" id="10_vqx31"]
-[ext_resource type="Texture2D" uid="uid://dj3pkxo5xfw7b" path="res://Selling Place-1.png (3).png" id="11_5q4fb"]
 [ext_resource type="Texture2D" uid="uid://ddykwukcvtjl4" path="res://b1.png" id="11_vqx31"]
 
 [sub_resource type="Theme" id="Theme_qwshj"]
@@ -50,7 +50,7 @@ metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 [sub_resource type="Resource" id="Resource_vqx31"]
 script = ExtResource("5_xjg7p")
 title = "Seller"
-icon = ExtResource("11_5q4fb")
+icon = ExtResource("9_foiwe")
 description = "Bring Gold Here In Order To Sell It"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 

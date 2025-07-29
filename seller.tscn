@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bx2kjividj20d" path="res://seller.gd" id="1_gks3k"]
 [ext_resource type="Texture2D" uid="uid://cjsj6cncu5sej" path="res://Selling Place-1.png (2).png" id="2_ywl65"]
-[ext_resource type="Texture2D" uid="uid://dj3pkxo5xfw7b" path="res://Selling Place-1.png (3).png" id="3_ywl65"]
+[ext_resource type="Texture2D" uid="uid://dc4ku4tm50qob" path="res://Factory.png" id="3_ywl65"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p0ylo"]
 animations = [{

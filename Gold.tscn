@@ -27,6 +27,7 @@ animations = [{
 size = Vector2(22, 22)
 
 [node name="Gold" type="StaticBody2D"]
+z_as_relative = false
 script = ExtResource("1_1gtyv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

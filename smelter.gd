@@ -21,6 +21,7 @@ func _ready() -> void:
 	$Check.add_to_group("Conveyor")
 	$Check.add_to_group("Smelt")
 	$Destroy.add_to_group("Destroy")
+	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 1
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):

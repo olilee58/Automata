@@ -1,86 +1,85 @@
-[gd_scene load_steps=27 format=3 uid="uid://bv8b2wnnhafdb"]
+[gd_scene load_steps=26 format=3 uid="uid://bv8b2wnnhafdb"]
 
 [ext_resource type="Script" uid="uid://bl8xou80f7e6t" path="res://ui.gd" id="1_3ujc7"]
 [ext_resource type="Texture2D" uid="uid://cqld3hryr1cqt" path="res://GUI-1.png (4).png" id="2_3ujc7"]
 [ext_resource type="PackedScene" uid="uid://20o0dpoob84w" path="res://Slot.tscn" id="2_dewlx"]
 [ext_resource type="Texture2D" uid="uid://7fu2r70p6l2x" path="res://GUI 2-1.png (5).png" id="3_dewlx"]
-[ext_resource type="Resource" uid="uid://c867y30b25im5" path="res://Resources.tres" id="4_qwshj"]
+[ext_resource type="Texture2D" uid="uid://btxahfeeckhf4" path="res://sprite_01.png" id="4_3ujc7"]
 [ext_resource type="Script" uid="uid://bs1wsxmamssgi" path="res://Item.gd" id="5_xjg7p"]
 [ext_resource type="Texture2D" uid="uid://b02xld8pblqgl" path="res://l1.png" id="6_wunin"]
+[ext_resource type="Texture2D" uid="uid://bwojo405els4w" path="res://Corner_Right01.png" id="7_foiwe"]
+[ext_resource type="Texture2D" uid="uid://psxrohm3dr6j" path="res://Corner_Left01.png" id="8_foiwe"]
 [ext_resource type="Texture2D" uid="uid://bdxkmpajo2r8s" path="res://r1.png" id="8_mg6lk"]
-[ext_resource type="Texture2D" uid="uid://c0sw7wlt1csnr" path="res://Corner_Left00.png" id="10_j04uc"]
+[ext_resource type="Texture2D" uid="uid://dgpuewyqfrr0d" path="res://Smelter-1.png (2).png" id="10_jqn02"]
 [ext_resource type="Texture2D" uid="uid://gi8p4aet8jmn" path="res://New Piskel-1.png.png" id="10_vqx31"]
 [ext_resource type="Texture2D" uid="uid://dj3pkxo5xfw7b" path="res://Selling Place-1.png (3).png" id="11_5q4fb"]
 [ext_resource type="Texture2D" uid="uid://ddykwukcvtjl4" path="res://b1.png" id="11_vqx31"]
-[ext_resource type="Texture2D" uid="uid://do52efeigcflh" path="res://Smelter-1.png.png" id="12_n04ve"]
-[ext_resource type="Texture2D" uid="uid://dc4ku4tm50qob" path="res://Factory.png" id="13_wi7yl"]
-[ext_resource type="Texture2D" uid="uid://bbl32ke61epg8" path="res://Flak 37-1.png (1).png" id="14_5q4fb"]
 
 [sub_resource type="Theme" id="Theme_qwshj"]
 
 [sub_resource type="Theme" id="Theme_48q88"]
 
-[sub_resource type="Resource" id="Resource_mg6lk"]
-script = ExtResource("5_xjg7p")
-title = "Conveyor 2"
-icon = ExtResource("8_mg6lk")
-description = "Same As The Normal Conveyor But With An Opening On The Right Side"
-metadata/_custom_type_script = "uid://bs1wsxmamssgi"
-
-[sub_resource type="Resource" id="Resource_wunin"]
-script = ExtResource("5_xjg7p")
-title = "Conveyor 3"
-icon = ExtResource("6_wunin")
-description = "Same As Conveyor 2, Except The Opening Is On The Left Side"
-metadata/_custom_type_script = "uid://bs1wsxmamssgi"
-
-[sub_resource type="Resource" id="Resource_j04uc"]
-script = ExtResource("5_xjg7p")
-title = "Conveyor 4"
-icon = ExtResource("11_vqx31")
-description = "This One Is A Combination Of Conveyor 2 And 3 Having Both Sides Open"
-metadata/_custom_type_script = "uid://bs1wsxmamssgi"
-
-[sub_resource type="Resource" id="Resource_vqx31"]
-script = ExtResource("5_xjg7p")
-title = "Conveyor 5"
-icon = ExtResource("10_j04uc")
-description = "Bends Any Direction As Long As You Rotate Them"
-metadata/_custom_type_script = "uid://bs1wsxmamssgi"
-
-[sub_resource type="Resource" id="Resource_n04ve"]
+[sub_resource type="Resource" id="Resource_5xurb"]
 script = ExtResource("5_xjg7p")
 title = "Drill"
 icon = ExtResource("10_vqx31")
 description = "This Building Drills Ores If Found"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
+[sub_resource type="Resource" id="Resource_mg6lk"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor"
+icon = ExtResource("4_3ujc7")
+description = "Moves Ores, Ammo, Down To Wherever You Want It To Go"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_wunin"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor (Right Corner)"
+icon = ExtResource("8_foiwe")
+description = "Conveyor That Turns To The Right"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_j04uc"]
+script = ExtResource("5_xjg7p")
+title = "Conveyor (Left Corner)"
+icon = ExtResource("7_foiwe")
+description = "Conveyor That Turns To The Left"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_vqx31"]
+script = ExtResource("5_xjg7p")
+title = "Seller"
+icon = ExtResource("11_5q4fb")
+description = "Bring Gold Here In Order To Sell It"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
+[sub_resource type="Resource" id="Resource_n04ve"]
+script = ExtResource("5_xjg7p")
+title = "Smelter"
+icon = ExtResource("10_jqn02")
+description = "If You Put Gold Ore Into This Machine, You Can Smelt Gold Ore Into Gold Bars"
+metadata/_custom_type_script = "uid://bs1wsxmamssgi"
+
 [sub_resource type="Resource" id="Resource_b1goy"]
 script = ExtResource("5_xjg7p")
-title = "Sell"
-icon = ExtResource("11_5q4fb")
-description = "This Building Sells Gold Ore and Gold Bars (If Smelted Through The Factory)"
+title = "Conveyor (Right Open)"
+icon = ExtResource("6_wunin")
+description = "Conveyor With An Opening On The Right Side"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_wi7yl"]
 script = ExtResource("5_xjg7p")
-title = "Smelter"
-icon = ExtResource("12_n04ve")
-description = "If You Put Gold Ore Into This Machine, You Can Smelt Gold Ore Into Gold Bars"
+title = "Conveyor (Left Open)"
+icon = ExtResource("8_mg6lk")
+description = "Conveyor With An Opening On The Left Side"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_5q4fb"]
 script = ExtResource("5_xjg7p")
-title = "Ammo Factory"
-icon = ExtResource("13_wi7yl")
-description = "This Factory Requires Golden Bars, It Will Then Produce Ammunition 2- 3 Shells For Your Guns"
-metadata/_custom_type_script = "uid://bs1wsxmamssgi"
-
-[sub_resource type="Resource" id="Resource_mqm5i"]
-script = ExtResource("5_xjg7p")
-title = "Flak 37"
-icon = ExtResource("14_5q4fb")
-description = "Gun Defence, Can Also Be Used As Artillery If You Switch The Range"
+title = "Conveyor (Both Open)"
+icon = ExtResource("11_vqx31")
+description = "Conveyor With An Opening On Both Sides"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [node name="UI" type="Control" node_paths=PackedStringArray("description")]
@@ -128,7 +127,7 @@ columns = 5
 
 [node name="Slot" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
-item = ExtResource("4_qwshj")
+item = SubResource("Resource_5xurb")
 
 [node name="Slot2" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
@@ -164,7 +163,6 @@ item = SubResource("Resource_5q4fb")
 
 [node name="Slot10" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
-item = SubResource("Resource_mqm5i")
 
 [node name="Slot11" parent="Build Menu/Inventory Grid Holder" instance=ExtResource("2_dewlx")]
 layout_mode = 2
@@ -244,6 +242,7 @@ offset_left = 23.0
 offset_top = 20.0
 offset_right = 463.0
 offset_bottom = 153.0
+scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 
@@ -287,3 +286,34 @@ offset_bottom = 238.5
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 4
+
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot" to="Build Menu/Inventory Grid Holder/Slot" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot2" to="Build Menu/Inventory Grid Holder/Slot2" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot3" to="Build Menu/Inventory Grid Holder/Slot3" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot4" to="Build Menu/Inventory Grid Holder/Slot4" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot5" to="Build Menu/Inventory Grid Holder/Slot5" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot6" to="Build Menu/Inventory Grid Holder/Slot6" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot7" to="Build Menu/Inventory Grid Holder/Slot7" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot8" to="Build Menu/Inventory Grid Holder/Slot8" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot9" to="Build Menu/Inventory Grid Holder/Slot9" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot10" to="Build Menu/Inventory Grid Holder/Slot10" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot11" to="Build Menu/Inventory Grid Holder/Slot11" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot12" to="Build Menu/Inventory Grid Holder/Slot12" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot13" to="Build Menu/Inventory Grid Holder/Slot13" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot14" to="Build Menu/Inventory Grid Holder/Slot14" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot15" to="Build Menu/Inventory Grid Holder/Slot15" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot16" to="Build Menu/Inventory Grid Holder/Slot16" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot17" to="Build Menu/Inventory Grid Holder/Slot17" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot18" to="Build Menu/Inventory Grid Holder/Slot18" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot19" to="Build Menu/Inventory Grid Holder/Slot19" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot20" to="Build Menu/Inventory Grid Holder/Slot20" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot21" to="Build Menu/Inventory Grid Holder/Slot21" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot22" to="Build Menu/Inventory Grid Holder/Slot22" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot23" to="Build Menu/Inventory Grid Holder/Slot23" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot24" to="Build Menu/Inventory Grid Holder/Slot24" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot25" to="Build Menu/Inventory Grid Holder/Slot25" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot26" to="Build Menu/Inventory Grid Holder/Slot26" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot27" to="Build Menu/Inventory Grid Holder/Slot27" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot28" to="Build Menu/Inventory Grid Holder/Slot28" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot29" to="Build Menu/Inventory Grid Holder/Slot29" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Build Menu/Inventory Grid Holder/Slot30" to="Build Menu/Inventory Grid Holder/Slot30" method="_on_mouse_exited"]

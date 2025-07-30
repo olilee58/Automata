@@ -77,6 +77,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("14_erhl6")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_erhl6")
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_xhi3l")
@@ -131,7 +139,7 @@ script = ExtResource("1_gh722")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_er3cr")
-animation = &"right"
+animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -31)

@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://cxcgcbit72wl6"]
+[gd_scene load_steps=20 format=4 uid="uid://cxcgcbit72wl6"]
 
-[ext_resource type="Script" path="res://GameManager.gd" id="1_s1tkd"]
+[ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_s1tkd"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="2_x2cwm"]
 [ext_resource type="PackedScene" uid="uid://blhqcm7owxs2k" path="res://Conveyor.tscn" id="3_p1ua4"]
 [ext_resource type="PackedScene" uid="uid://bgpt4o5vigke6" path="res://conveyor_left.tscn" id="5_wcsde"]
@@ -278,6 +278,18 @@ terrain_set_1/terrain_0/name = "Terrain 0"
 terrain_set_1/terrain_0/color = Color(0.703705, 9.62615e-08, 0.350016, 1)
 sources/0 = SubResource("TileSetAtlasSource_kva58")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2cwm"]
+size = Vector2(1054, 11975)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1ua4"]
+size = Vector2(18441, 799)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kyum"]
+size = Vector2(1101, 11843)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcsde"]
+size = Vector2(18030, 1068)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_s1tkd")
 drill = ExtResource("2_x2cwm")
@@ -291,7 +303,7 @@ tile_map_data = PackedByteArray("AAAFAAQAAAAAAAAAAAAFAAMAAAABAAAAAAAFAAIAAAABAAA
 tile_set = SubResource("TileSet_f5c0m")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("13_x2cwm")]
-position = Vector2(960, 540)
+position = Vector2(9170, 5200)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0.000976563, 0)
@@ -303,3 +315,27 @@ offset_top = 203.0
 offset_right = 278.0
 offset_bottom = 203.0
 scale = Vector2(0.5, 0.5)
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(517, 5977.5)
+shape = SubResource("RectangleShape2D_x2cwm")
+
+[node name="Area2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(9210.5, 389.5)
+shape = SubResource("RectangleShape2D_p1ua4")
+
+[node name="Area2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(17469.5, 5911.5)
+shape = SubResource("RectangleShape2D_1kyum")
+
+[node name="Area2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(9005, 11243)
+shape = SubResource("RectangleShape2D_wcsde")

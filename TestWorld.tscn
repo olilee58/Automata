@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bv8b2wnnhafdb" path="res://UI.tscn" id="12_vwlrg"]
 [ext_resource type="PackedScene" uid="uid://bb7popyxvd6r4" path="res://Arrow.tscn" id="13_p1ua4"]
 [ext_resource type="PackedScene" uid="uid://dib6ofkigkct8" path="res://Character.tscn" id="13_x2cwm"]
-[ext_resource type="Script" path="res://coin_display.gd" id="14_1kyum"]
+[ext_resource type="Script" uid="uid://d1idgsa4skokg" path="res://coin_display.gd" id="14_1kyum"]
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
@@ -366,7 +366,6 @@ expand_mode = 2
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 60
-text = "0"
 
 [node name="Seller" parent="." instance=ExtResource("7_mqces")]
 position = Vector2(9472, 5184)

@@ -32,7 +32,6 @@ func _input(event: InputEvent) -> void:
 				placing = true
 				Global.placing = 1
 				current_towers_index = Global.choice
-				print(current_towers_index)
 				var new_tower = towers[current_towers_index].instantiate()
 				add_child(new_tower)
 				current = new_tower
@@ -48,23 +47,3 @@ func _input(event: InputEvent) -> void:
 			placing = false
 			Global.placing = 0
 			current.queue_free()
-#	elif event.is_action_pressed("1"):
-#		current_towers_index = 0
-#	elif event.is_action_pressed("2"):
-#		current_towers_index = 1
-	#elif event.is_action_pressed("3"):
-	#	current_towers_index = 2
-#	elif event.is_action_pressed("4"):
-#		current_towers_index = 3
-#	elif event.is_action_pressed("5"):
-#		current_towers_index = 4
-#	elif event.is_action_pressed("6"):
-#		current_towers_index = 5
-#	elif event.is_action_pressed("7"):
-	#	current_towers_index = 6
-	#elif event.is_action_pressed("8"):
-	#	current_towers_index = 7
-	#elif event.is_action_pressed("9"):
-	#	current_towers_index = 8
-	#elif event.is_action_pressed("0"):
-	#	current_towers_index = 9

@@ -36,7 +36,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			Global.cash += 5
 		else:
 			Global.cash += 1
-		print(Global.cash)
 		queue_free()
 	if area.is_in_group("Destroy"):
 		queue_free()

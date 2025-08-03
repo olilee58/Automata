@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b50nhx485cysw"]
+[gd_scene load_steps=23 format=4 uid="uid://cxcgcbit72wl6"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_s1tkd"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="2_x2cwm"]
@@ -12,8 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://crawb1gclnpm1" path="res://mind1_real.png" id="11_m2occ"]
 [ext_resource type="PackedScene" uid="uid://dg5akd03e3bj3" path="res://smelter.tscn" id="11_x2cwm"]
 [ext_resource type="PackedScene" uid="uid://bv8b2wnnhafdb" path="res://UI.tscn" id="12_vwlrg"]
+[ext_resource type="PackedScene" uid="uid://bb7popyxvd6r4" path="res://Arrow.tscn" id="13_p1ua4"]
 [ext_resource type="PackedScene" uid="uid://dib6ofkigkct8" path="res://Character.tscn" id="13_x2cwm"]
-[ext_resource type="Script" uid="uid://d1idgsa4skokg" path="res://coin_display.gd" id="14_1kyum"]
+[ext_resource type="Script" path="res://coin_display.gd" id="14_1kyum"]
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
@@ -319,6 +320,9 @@ offset_right = 278.0
 offset_bottom = 203.0
 scale = Vector2(0.5, 0.5)
 
+[node name="StaticBody2D" parent="CharacterBody2D/Camera2D" instance=ExtResource("13_p1ua4")]
+position = Vector2(2, -78)
+
 [node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -363,3 +367,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 60
 text = "0"
+
+[node name="Seller" parent="." instance=ExtResource("7_mqces")]
+position = Vector2(9472, 5184)

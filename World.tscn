@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bd1jf2wciir7x"]
+[gd_scene load_steps=12 format=3 uid="uid://bh70h50nrn6hx"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_2dftf"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="1_c6gwx"]

@@ -14,6 +14,7 @@ func _physics_process(delta: float) -> void:
 		velocity = fix_direction * SPEED
 		
 	new_position = global_position
+	Global.player = new_position
 	if old_position:
 		if new_position == old_position:
 			$AnimatedSprite2D.set_frame_and_progress(0, 0)

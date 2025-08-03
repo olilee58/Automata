@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb7popyxvd6r4"]
+
+[ext_resource type="Script" uid="uid://cgl1begtvwgv4" path="res://arrow.gd" id="1_08ca5"]
+[ext_resource type="Texture2D" uid="uid://c8sh3jsm5i7wb" path="res://Arriw-1.png.png" id="2_08ca5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bju6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_08ca5")
+}],
+"loop": true,
+"name": &"ortho",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8qm0"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_08ca5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 50)
+sprite_frames = SubResource("SpriteFrames_bju6y")
+animation = &"ortho"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_n8qm0")
+disabled = true

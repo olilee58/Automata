@@ -4,6 +4,7 @@ var cash = 0
 var placing = 0
 var can_place = 1
 var choice = null
+var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

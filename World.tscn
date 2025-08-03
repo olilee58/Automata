@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://vmr8bq1im0bn" path="res://join_r.tscn" id="10_f5c0m"]
 [ext_resource type="PackedScene" uid="uid://dg5akd03e3bj3" path="res://smelter.tscn" id="11_kva58"]
 
-[node name="World" type="Node2D"]
+[node name="World2" type="Node2D"]
 script = ExtResource("1_2dftf")
 drill = ExtResource("1_c6gwx")
 towers = Array[PackedScene]([ExtResource("1_c6gwx"), ExtResource("3_bcbcq"), ExtResource("4_js7pq"), ExtResource("5_p1v5b"), ExtResource("6_wygdx"), ExtResource("7_wygdx"), ExtResource("8_fvag4"), ExtResource("9_kva58"), ExtResource("10_f5c0m"), ExtResource("11_kva58")])

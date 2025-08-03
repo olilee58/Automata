@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cxcgcbit72wl6"]
+[gd_scene load_steps=21 format=4 uid="uid://cxcgcbit72wl6"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_s1tkd"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="2_x2cwm"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://crawb1gclnpm1" path="res://mind1_real.png" id="11_m2occ"]
 [ext_resource type="PackedScene" uid="uid://dg5akd03e3bj3" path="res://smelter.tscn" id="11_x2cwm"]
 [ext_resource type="PackedScene" uid="uid://bv8b2wnnhafdb" path="res://UI.tscn" id="12_vwlrg"]
+[ext_resource type="PackedScene" uid="uid://bb7popyxvd6r4" path="res://Arrow.tscn" id="13_p1ua4"]
 [ext_resource type="PackedScene" uid="uid://dib6ofkigkct8" path="res://Character.tscn" id="13_x2cwm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
@@ -309,6 +310,9 @@ position = Vector2(9170, 5200)
 position = Vector2(0.000976563, 0)
 scale = Vector2(10, 10)
 
+[node name="StaticBody2D" parent="CharacterBody2D/Camera2D" instance=ExtResource("13_p1ua4")]
+position = Vector2(-2, -80)
+
 [node name="UI" parent="CharacterBody2D/Camera2D" instance=ExtResource("12_vwlrg")]
 offset_left = 278.0
 offset_top = 203.0
@@ -339,3 +343,6 @@ shape = SubResource("RectangleShape2D_1kyum")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
 position = Vector2(9005, 11243)
 shape = SubResource("RectangleShape2D_wcsde")
+
+[node name="Seller" parent="." instance=ExtResource("7_mqces")]
+position = Vector2(9472, 5184)

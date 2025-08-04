@@ -23,63 +23,81 @@
 script = ExtResource("5_xjg7p")
 title = "Drill"
 icon = ExtResource("10_vqx31")
-description = "This Building Drills Ores If Found"
+description = "This Building Drills Ores If Found
+
+$1"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_mg6lk"]
 script = ExtResource("5_xjg7p")
 title = "Conveyor"
 icon = ExtResource("4_3ujc7")
-description = "Moves Ores, Ammo, Down To Wherever You Want It To Go"
+description = "Moves Ores, Ammo, Down To Wherever You Want It To Go
+
+$5"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_wunin"]
 script = ExtResource("5_xjg7p")
 title = "Conveyor (Right Corner)"
 icon = ExtResource("8_foiwe")
-description = "Conveyor That Turns To The Right"
+description = "Conveyor That Turns To The Right
+
+$5"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_j04uc"]
 script = ExtResource("5_xjg7p")
 title = "Conveyor (Left Corner)"
 icon = ExtResource("7_foiwe")
-description = "Conveyor That Turns To The Left"
+description = "Conveyor That Turns To The Left
+
+$5"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_vqx31"]
 script = ExtResource("5_xjg7p")
 title = "Seller"
 icon = ExtResource("9_foiwe")
-description = "Bring Gold Here In Order To Sell It"
+description = "Bring Gold Here In Order To Sell It
+
+$50"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_n04ve"]
 script = ExtResource("5_xjg7p")
 title = "Smelter"
 icon = ExtResource("10_jqn02")
-description = "If You Put Gold Ore Into This Machine, You Can Smelt Gold Ore Into Gold Bars"
+description = "If You Put Gold Ore Into This Machine, You Can Smelt Gold Ore Into Gold Bars
+
+$10"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_b1goy"]
 script = ExtResource("5_xjg7p")
 title = "Conveyor (Right Open)"
 icon = ExtResource("6_wunin")
-description = "Conveyor With An Opening On The Right Side"
+description = "Conveyor With An Opening On The Right Side
+
+$7"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_wi7yl"]
 script = ExtResource("5_xjg7p")
 title = "Conveyor (Left Open)"
 icon = ExtResource("8_mg6lk")
-description = "Conveyor With An Opening On The Left Side"
+description = "Conveyor With An Opening On The Left Side
+
+$7"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [sub_resource type="Resource" id="Resource_5q4fb"]
 script = ExtResource("5_xjg7p")
 title = "Conveyor (Both Open)"
 icon = ExtResource("11_vqx31")
-description = "Conveyor With An Opening On Both Sides"
+description = "Conveyor With An Opening On Both Sides
+
+$10"
 metadata/_custom_type_script = "uid://bs1wsxmamssgi"
 
 [node name="UI" type="Control" node_paths=PackedStringArray("description")]

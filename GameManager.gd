@@ -33,8 +33,45 @@ func _input(event: InputEvent) -> void:
 				Global.placing = 1
 				current_towers_index = Global.choice
 				var new_tower = towers[current_towers_index].instantiate()
-				add_child(new_tower)
-				current = new_tower
+				if Global.choice == 0 and Global.cash >= 1:
+					Global.cash -= 1
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 1 and Global.cash >= 5:
+					Global.cash -= 5
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 2 and Global.cash >= 5:
+					Global.cash -= 5
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 3 and Global.cash >= 5:
+					Global.cash -= 5
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 4 and Global.cash >= 50:
+					Global.cash -= 50
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 5 and Global.cash >= 10:
+					Global.cash -= 10
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 6 and Global.cash >= 5:
+					Global.cash -= 5
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 7 and Global.cash >= 5:
+					Global.cash -= 5
+					add_child(new_tower)
+					current = new_tower
+				elif Global.choice == 8 and Global.cash >= 5:
+					Global.cash -= 5
+					add_child(new_tower)
+					current = new_tower
+				else:
+					placing = false
+					Global.placing = 0
 		else:
 			if Global.can_place == 1:
 				placing = false

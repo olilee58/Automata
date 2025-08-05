@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://cxcgcbit72wl6"]
+[gd_scene load_steps=24 format=4 uid="uid://cxcgcbit72wl6"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_s1tkd"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="2_x2cwm"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dib6ofkigkct8" path="res://Character.tscn" id="13_x2cwm"]
 [ext_resource type="Script" uid="uid://d1idgsa4skokg" path="res://coin_display.gd" id="14_1kyum"]
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
+[ext_resource type="AudioStream" uid="uid://46rsb60mpqhj" path="res://04. Lifted Clouds of Eons.mp3" id="17_68dej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
 texture = ExtResource("11_m2occ")
@@ -322,6 +323,13 @@ scale = Vector2(0.5, 0.5)
 
 [node name="StaticBody2D" parent="CharacterBody2D/Camera2D" instance=ExtResource("13_p1ua4")]
 position = Vector2(2, -78)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+scale = Vector2(10, 10)
+stream = ExtResource("17_68dej")
+volume_db = -12.876
+autoplay = true
+parameters/looping = false
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 

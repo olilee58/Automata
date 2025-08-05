@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cesf75mfv0a0f"]
+[gd_scene load_steps=7 format=3 uid="uid://cesf75mfv0a0f"]
 
 [ext_resource type="Script" uid="uid://cmycm57nnbs2p" path="res://title_screen.gd" id="1_rpgwi"]
 [ext_resource type="FontFile" uid="uid://bwlvmstr7m0jb" path="res://Font/BAD GRUNGE.ttf" id="2_0ijhy"]
 [ext_resource type="Texture2D" uid="uid://3w54krew0h4" path="res://Adobe Express - file.png" id="2_6xtyh"]
 [ext_resource type="Texture2D" uid="uid://btlsf1vt7ubr8" path="res://Gear 2.png" id="4_lyuk6"]
+[ext_resource type="AudioStream" uid="uid://ccy71u1pa7pk3" path="res://01. Main Menu.mp3" id="5_6326y"]
 
 [sub_resource type="Theme" id="Theme_0ijhy"]
 
@@ -55,6 +56,12 @@ text = "AUT   MATA"
 position = Vector2(908, 537)
 scale = Vector2(0.365278, 0.365278)
 texture = ExtResource("4_lyuk6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_6326y")
+volume_db = -5.0
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

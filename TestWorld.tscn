@@ -329,7 +329,7 @@ scale = Vector2(10, 10)
 stream = ExtResource("17_68dej")
 volume_db = -12.876
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 

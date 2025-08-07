@@ -15,7 +15,7 @@ func _ready() -> void:
 		else:
 			Global.can_place = 1
 			$AnimatedSprite2D.play("default")
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.000000001).timeout
 	modulate.a = 1
 	$Check.add_to_group("Sell")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX - 3

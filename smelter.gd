@@ -16,7 +16,7 @@ func _ready() -> void:
 		else:
 			Global.can_place = 1
 			$AnimatedSprite2D.play("new_animation")
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.000000001).timeout
 	$AnimatedSprite2D.play("default")
 	modulate.a = 1
 	$Check.add_to_group("Conveyor")

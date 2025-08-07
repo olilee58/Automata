@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dib6ofkigkct8"]
+[gd_scene load_steps=29 format=3 uid="uid://dib6ofkigkct8"]
 
 [ext_resource type="Script" uid="uid://bqugr4c37gf66" path="res://character.gd" id="1_gh722"]
 [ext_resource type="Texture2D" uid="uid://vnkn7lwnbnlx" path="res://robot_00.png" id="1_jfs23"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dey0njr8u8ew8" path="res://robot_15.png" id="22_ukp3u"]
 [ext_resource type="Texture2D" uid="uid://d0ufkrajhc8ye" path="res://robot_16.png" id="23_vc6ch"]
 [ext_resource type="Texture2D" uid="uid://cmptau0l6kmux" path="res://robot_17.png" id="24_1pqxy"]
+[ext_resource type="AudioStream" uid="uid://cpvqbe4fva3iw" path="res://walking-sound-effect-272246.mp3" id="26_k301r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_er3cr"]
 animations = [{
@@ -49,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
-"speed": 12.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -72,7 +73,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"left",
-"speed": 12.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -103,7 +104,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"right",
-"speed": 12.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -126,7 +127,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"up",
-"speed": 12.0
+"speed": 7.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jfs23"]
@@ -139,8 +140,13 @@ script = ExtResource("1_gh722")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_er3cr")
-animation = &"new_animation"
+animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -31)
 shape = SubResource("CapsuleShape2D_jfs23")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_k301r")
+volume_db = -14.054
+parameters/looping = true

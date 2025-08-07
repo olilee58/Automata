@@ -18,18 +18,27 @@ func _physics_process(delta: float) -> void:
 	if old_position:
 		if new_position == old_position:
 			$AnimatedSprite2D.set_frame_and_progress(0, 0)
+			$AudioStreamPlayer.playing = false
 		elif new_position.x > old_position.x:
 			if $AnimatedSprite2D.animation != "right":
 				$AnimatedSprite2D.play("right")
+			if $AudioStreamPlayer.playing == false:
+				$AudioStreamPlayer.play()
 		elif new_position.x < old_position.x:
 			if $AnimatedSprite2D.animation != "left":
 				$AnimatedSprite2D.play("left")
+			if $AudioStreamPlayer.playing == false:
+				$AudioStreamPlayer.play()
 		elif new_position.y < old_position.y:
 			if $AnimatedSprite2D.animation != "up":
 				$AnimatedSprite2D.play("up")
+			if $AudioStreamPlayer.playing == false:
+				$AudioStreamPlayer.play()
 		elif new_position.y > old_position.y:
 			if $AnimatedSprite2D.animation != "down":
 				$AnimatedSprite2D.play("down")
+			if $AudioStreamPlayer.playing == false:
+				$AudioStreamPlayer.play()
 	old_position = new_position
 
 	move_and_slide()

@@ -64,18 +64,18 @@ func _input(event: InputEvent) -> void:
 					Global.cash -= cost
 					add_child(new_tower)
 					current = new_tower
-				elif Global.choice == 6 and Global.cash >= 5:
-					cost = 5
+				elif Global.choice == 6 and Global.cash >= 7:
+					cost = 7
 					Global.cash -= cost
 					add_child(new_tower)
 					current = new_tower
-				elif Global.choice == 7 and Global.cash >= 5:
-					cost = 5
+				elif Global.choice == 7 and Global.cash >= 7:
+					cost = 7
 					Global.cash -= cost
 					add_child(new_tower)
 					current = new_tower
-				elif Global.choice == 8 and Global.cash >= 5:
-					cost = 5
+				elif Global.choice == 8 and Global.cash >= 10:
+					cost = 10
 					Global.cash -= cost
 					add_child(new_tower)
 					current = new_tower

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cxcgcbit72wl6"]
+[gd_scene load_steps=27 format=4 uid="uid://cxcgcbit72wl6"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_s1tkd"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="2_x2cwm"]
@@ -12,11 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://crawb1gclnpm1" path="res://mind1_real.png" id="11_m2occ"]
 [ext_resource type="PackedScene" uid="uid://dg5akd03e3bj3" path="res://smelter.tscn" id="11_x2cwm"]
 [ext_resource type="PackedScene" uid="uid://bv8b2wnnhafdb" path="res://UI.tscn" id="12_vwlrg"]
-[ext_resource type="PackedScene" uid="uid://bb7popyxvd6r4" path="res://Arrow.tscn" id="13_p1ua4"]
+[ext_resource type="PackedScene" path="res://Arrow.tscn" id="13_p1ua4"]
 [ext_resource type="PackedScene" uid="uid://dib6ofkigkct8" path="res://Character.tscn" id="13_x2cwm"]
 [ext_resource type="Script" uid="uid://d1idgsa4skokg" path="res://coin_display.gd" id="14_1kyum"]
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
 [ext_resource type="AudioStream" uid="uid://46rsb60mpqhj" path="res://04. Lifted Clouds of Eons.mp3" id="17_68dej"]
+[ext_resource type="Texture2D" uid="uid://cvr7rgdy70q1p" path="res://pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector-removebg-preview.png" id="18_mqces"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
 texture = ExtResource("11_m2occ")
@@ -294,6 +295,12 @@ size = Vector2(1101, 11843)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcsde"]
 size = Vector2(18030, 1068)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68dej"]
+bg_color = Color(0.69075, 0, 0.07475, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqces"]
+bg_color = Color(0.358913, 0.699632, 0, 1)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_s1tkd")
 drill = ExtResource("2_x2cwm")
@@ -377,3 +384,32 @@ theme_override_font_sizes/font_size = 60
 
 [node name="Seller" parent="." instance=ExtResource("7_mqces")]
 position = Vector2(9472, 5184)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pixel-heart-pixel-art-illustration-8-bit-heart-icon-red-heart-pixel-graphic-video-game-heart-icon-vector-removebg-preview" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(42, 936)
+scale = Vector2(0.186, 0.186)
+texture = ExtResource("18_mqces")
+
+[node name="Health" type="ProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 69.0
+offset_top = -97.0
+offset_right = 574.0
+offset_bottom = -45.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_68dej")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mqces")
+value = 100.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cxcgcbit72wl6"]
+[gd_scene load_steps=27 format=4 uid="uid://cxcgcbit72wl6"]
 
 [ext_resource type="Script" uid="uid://dltfiov63brxj" path="res://GameManager.gd" id="1_s1tkd"]
 [ext_resource type="PackedScene" uid="uid://b3t1ifmq81apj" path="res://Drill.tscn" id="2_x2cwm"]
@@ -17,6 +17,9 @@
 [ext_resource type="Script" uid="uid://d1idgsa4skokg" path="res://coin_display.gd" id="14_1kyum"]
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
 [ext_resource type="AudioStream" uid="uid://46rsb60mpqhj" path="res://04. Lifted Clouds of Eons.mp3" id="17_68dej"]
+[ext_resource type="Texture2D" uid="uid://bvs716153j1px" path="res://health bar gameboy (1)-1.png (13).png" id="18_mqces"]
+[ext_resource type="Texture2D" uid="uid://c2u8i1uqmpehj" path="res://health bar gameboy (1)-1.png (15).png" id="18_qjr00"]
+[ext_resource type="Texture2D" uid="uid://d3nykkmxxn6jq" path="res://health bar gameboy (1)-1.png (16).png" id="20_6ym0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
 texture = ExtResource("11_m2occ")
@@ -380,17 +383,22 @@ position = Vector2(9472, 5184)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Health" type="TextureProgressBar" parent="CanvasLayer/Control"]
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Health" type="TextureProgressBar" parent="CanvasLayer/VBoxContainer/Control"]
 layout_mode = 0
-offset_left = 101.0
-offset_top = 957.0
-offset_right = 806.0
-offset_bottom = 1055.0
+offset_left = -426.0
+offset_top = 527.0
+offset_right = 3670.0
+offset_bottom = 2575.0
+scale = Vector2(0.18, 0.18)
+max_value = 80.0
+value = 80.0
+texture_under = ExtResource("18_qjr00")
+texture_over = ExtResource("18_mqces")
+texture_progress = ExtResource("20_6ym0a")

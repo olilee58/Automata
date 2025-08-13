@@ -18,8 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
 [ext_resource type="AudioStream" uid="uid://46rsb60mpqhj" path="res://04. Lifted Clouds of Eons.mp3" id="17_68dej"]
 [ext_resource type="Texture2D" uid="uid://bvs716153j1px" path="res://health bar gameboy (1)-1.png (13).png" id="18_mqces"]
-[ext_resource type="Texture2D" uid="uid://c2u8i1uqmpehj" path="res://health bar gameboy (1)-1.png (15).png" id="18_qjr00"]
-[ext_resource type="Texture2D" uid="uid://d3nykkmxxn6jq" path="res://health bar gameboy (1)-1.png (16).png" id="20_6ym0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kva58"]
 texture = ExtResource("11_m2occ")
@@ -297,6 +295,12 @@ size = Vector2(1101, 11843)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcsde"]
 size = Vector2(18030, 1068)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqces"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5504"]
+bg_color = Color(0, 0.713726, 0, 1)
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_s1tkd")
 drill = ExtResource("2_x2cwm")
@@ -390,15 +394,16 @@ offset_bottom = 40.0
 [node name="Control" type="Control" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Health" type="TextureProgressBar" parent="CanvasLayer/VBoxContainer/Control"]
-layout_mode = 0
-offset_left = -426.0
-offset_top = 527.0
-offset_right = 3670.0
-offset_bottom = 2575.0
-scale = Vector2(0.18, 0.18)
-max_value = 80.0
-value = 80.0
-texture_under = ExtResource("18_qjr00")
-texture_over = ExtResource("18_mqces")
-texture_progress = ExtResource("20_6ym0a")
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/VBoxContainer/Control"]
+offset_left = 164.0
+offset_top = 917.0
+offset_right = 350.0
+offset_bottom = 949.0
+theme_override_styles/background = SubResource("StyleBoxFlat_mqces")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a5504")
+value = 100.0
+
+[node name="HealthBarGameboy(1)-1_png(13)" type="Sprite2D" parent="CanvasLayer/VBoxContainer/Control"]
+position = Vector2(210, 967)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("18_mqces")

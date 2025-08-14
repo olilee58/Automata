@@ -62,6 +62,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):
 		if delete == 1:
 			if Global.placing == 0:
+				Global.cash += 1
 				queue_free()
 
 func _on_mouse_entered() -> void:

@@ -4,7 +4,7 @@ const SPEED = 300.0
 var old_position = null
 var new_position = null
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var fix_direction = direction.normalized()

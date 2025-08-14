@@ -1,6 +1,6 @@
 extends Node
 
-var cash = 1
+var cash = 1000000
 var placing = 0
 var can_place = 1
 var choice = null

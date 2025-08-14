@@ -5,6 +5,8 @@ var current = null
 var go = 0
 var stop = 0
 var delete = 0
+var old_position = null
+var new_position = null
 
 func _ready() -> void:
 	$CollisionShape2D.disabled = true
@@ -35,21 +37,26 @@ func mining():
 		add_child(new_ore)
 		current = get_child(-1)
 		go = 1
-		await get_tree().create_timer(1.5).timeout
-		stop = 1
+		while current and current.global_position != $Push/CollisionShape2D.global_position:
+			await get_tree().create_timer(0.0000000000000000000001).timeout
+			if not current:
+				pass
+		go = 0
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if go == 1:
-		if stop == 0:
-			if current:
-				current.global_position = current.global_position.move_toward($Push/CollisionShape2D.global_position, 0.64)
+		if current:
+			current.global_position = current.global_position.move_toward($Push/CollisionShape2D.global_position, 0.64 * delta * 75)
+			if old_position:
+				old_position = new_position
+				new_position = current.global_position
+				if old_position == new_position:
+					go = 0
+					current = null
 			else:
-				await get_tree().create_timer(1.5).timeout
-				go = 0
-				stop = 0
+				old_position = current.global_position
 		else:
 			go = 0
-			stop = 0
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Delete"):

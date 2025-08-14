@@ -4,6 +4,7 @@ var target = null
 var old_position = null
 var new_position = null
 var bar = 0
+var check = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,14 +15,18 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if target:
-		global_position = global_position.move_toward(target.global_position, 0.64)
+		global_position = global_position.move_toward(target.global_position, .64 * delta * 60)
 	if old_position:
 		old_position = new_position
 		new_position = global_position
 		if old_position == new_position:
-			queue_free()
+			if check == 5:
+				queue_free()
+			check += 1
+		else:
+			check = 0
 	else:
 		old_position = global_position
 

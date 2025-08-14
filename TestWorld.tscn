@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://crawb1gclnpm1" path="res://mind1_real.png" id="11_m2occ"]
 [ext_resource type="PackedScene" uid="uid://dg5akd03e3bj3" path="res://smelter.tscn" id="11_x2cwm"]
 [ext_resource type="PackedScene" uid="uid://bv8b2wnnhafdb" path="res://UI.tscn" id="12_vwlrg"]
-[ext_resource type="PackedScene" path="res://Arrow.tscn" id="13_p1ua4"]
+[ext_resource type="PackedScene" uid="uid://bb7popyxvd6r4" path="res://Arrow.tscn" id="13_p1ua4"]
 [ext_resource type="PackedScene" uid="uid://dib6ofkigkct8" path="res://Character.tscn" id="13_x2cwm"]
 [ext_resource type="Script" uid="uid://d1idgsa4skokg" path="res://coin_display.gd" id="14_1kyum"]
 [ext_resource type="Texture2D" uid="uid://bhb86j1carp6l" path="res://image-removebg-preview.png" id="14_p1ua4"]
@@ -395,6 +395,7 @@ offset_bottom = 40.0
 layout_mode = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/VBoxContainer/Control"]
+layout_mode = 0
 offset_left = 164.0
 offset_top = 917.0
 offset_right = 350.0
